@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://cdn.cohesionapps.com/cohesion/xs2.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body>
+<script>
+  var readCookie = function(name) {
+    var matches = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+    return matches ? matches.pop() : null;
+  };
+
+  if (window.parent) {
+    var xsId = readCookie('cohsn_xs_id');
+    if (xsId !== null) {
+      window.parent.postMessage('COHESION:XS_ID:' + xsId, '*');
+    } else {
+      window.parent.postMessage('COHESION:XS_UNSUPPORTED', '*');
+    }
+  }
+</script>
+
+</body></html>
